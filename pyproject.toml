@@ -1,9 +1,51 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
 [project]
-name = "ml-project-template"
-version = "0.1.0"
-description = "Production-ready ML project template"
-requires-python = ">=3.10"
+name            = "credit-card-fraud-detection"
+version         = "1.0.0"
+description     = "KNN-based credit card fraud detection on an imbalanced dataset"
+readme          = "README.md"
+license         = { text = "MIT" }
+requires-python = ">=3.11"
+
+authors = [
+  { name = "Subin Thapa", email = "subinthapa2092@github.com" }
+]
+
+keywords = ["machine-learning", "fraud-detection", "knn", "imbalanced-dataset", "scikit-learn"]
+
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Intended Audience :: Education",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "matplotlib>=3.8",
+  "seaborn>=0.13",
+  "scikit-learn>=1.4",
+  "jupyter>=1.0",
+  "notebook>=7.2",
+  "ipykernel>=6.29",
+]
+
+[project.urls]
+Homepage   = "https://github.com/Subinthapa2092/ML-SoCreatur"
+Repository = "https://github.com/Subinthapa2092/ML-SoCreatur"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.flake8]
+max-line-length = 100
+ignore          = ["E402", "W503"]
+exclude         = [".git", "__pycache__", "notebooks"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-pythonpath = ["."]
+verbose   = true

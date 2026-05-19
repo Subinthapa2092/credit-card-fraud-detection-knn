@@ -1,63 +1,63 @@
-# ─────────────────────────────────────────────────────────────────
-#  .gitignore — Credit Card Fraud Detection
-# ─────────────────────────────────────────────────────────────────
 
-# ── Data (too large for GitHub — download from Kaggle) ───────────
+#  .gitignore — Credit Card Fraud Detection
+
+
+#  Data (too large for GitHub — download from Kaggle) 
 data/creditcard.csv
 data/*.csv
 data/*.zip
 
-# ── Saved models ─────────────────────────────────────────────────
+#  Saved models 
 models/*.pkl
 models/*.joblib
 models/*.h5
 models/*.pt
 
-# ── Python cache ─────────────────────────────────────────────────
+#  Python cache 
 __pycache__/
 *.py[cod]
 *$py.class
 *.pyo
 *.pyd
 
-# ── Jupyter ──────────────────────────────────────────────────────
+# Jupyter 
 .ipynb_checkpoints/
 *.ipynb_checkpoints
 
-# ── Virtual environments ─────────────────────────────────────────
+#  Virtual environments 
 venv/
 .venv/
 env/
 ENV/
 .env
 
-# ── Build artifacts ──────────────────────────────────────────────
+# Build artifacts
 build/
 dist/
 *.egg-info/
 *.egg
 
-# ── OS files ─────────────────────────────────────────────────────
+# OS files 
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# ── IDE / Editor ─────────────────────────────────────────────────
+#  IDE / Editor 
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# ── Logs ─────────────────────────────────────────────────────────
+#  Logs 
 logs/*.log
 
-# ── Test & coverage ──────────────────────────────────────────────
+#  Test & coverage
 .pytest_cache/
 .coverage
 htmlcov/
 coverage.xml
 
-# ── Temporary files ──────────────────────────────────────────────
+#  Temporary files
 *.tmp
 *.bak
 *.orig

@@ -82,8 +82,12 @@ ML-Project-Scoreatai/
 │   └── credit_fraud.ipynb
 │
 │
-│
+│   
+├── pyproject.toml
 ├── main.py
+├── Makefile
+├── gitignore.txt
+├── Dockerfile
 ├── requirements.txt
 └── README.md
 🚀 How to Run

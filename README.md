@@ -65,7 +65,7 @@ Data Loading → EDA → Train-Test Split → Feature Scaling → Model Training
 ## 🗂 Project Structure
 
 ```bash
-ML-Project-Scoreatai/
+credit-card-fraud-detection-knn/
 │
 ├── data/
 │   └── raw/

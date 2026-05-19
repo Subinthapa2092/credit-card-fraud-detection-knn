@@ -1,15 +1,14 @@
-# ═══════════════════════════════════════════════════════════════
+
 #  Credit Card Fraud Detection — Makefile
 #  Usage:  make <target>
-# ═══════════════════════════════════════════════════════════════
 
 .PHONY: help install notebook run clean docker-build docker-run lint test
 
-# ── Default target ──────────────────────────────────────────────
+# ── Default target 
 help:
 	@echo ""
 	@echo "  Credit Card Fraud Detection — Available commands"
-	@echo "  ─────────────────────────────────────────────────"
+	@echo "                                                "
 	@echo "  make install        Install all Python dependencies"
 	@echo "  make notebook       Launch Jupyter Notebook"
 	@echo "  make run            Run the notebook non-interactively (CLI)"
@@ -20,19 +19,19 @@ help:
 	@echo "  make test           Run unit tests"
 	@echo ""
 
-# ── Setup ───────────────────────────────────────────────────────
+# Setup 
 install:
 	@echo ">>> Installing dependencies..."
 	pip install --upgrade pip
 	pip install -r requirements.txt
 	@echo ">>> Done."
 
-# ── Run notebook interactively ───────────────────────────────────
+#  Run notebook interactively 
 notebook:
 	@echo ">>> Starting Jupyter Notebook..."
 	jupyter notebook notebooks/credit_fraud.ipynb
 
-# ── Execute notebook end-to-end from command line ────────────────
+#  Execute notebook end-to-end from command line 
 run:
 	@echo ">>> Running notebook non-interactively..."
 	jupyter nbconvert \
@@ -42,7 +41,7 @@ run:
 		notebooks/credit_fraud.ipynb
 	@echo ">>> Notebook executed. Figures saved to reports/figures/"
 
-# ── Clean generated files ────────────────────────────────────────
+#  Clean generated files 
 clean:
 	@echo ">>> Cleaning generated files..."
 	find . -type f -name "*.pyc" -delete
@@ -51,7 +50,7 @@ clean:
 	rm -f reports/figures/*.png
 	@echo ">>> Clean complete."
 
-# ── Docker ───────────────────────────────────────────────────────
+# Docker 
 docker-build:
 	@echo ">>> Building Docker image..."
 	docker build -t fraud-detection:latest .
@@ -64,13 +63,13 @@ docker-run:
 		-v $(PWD)/reports:/app/reports \
 		fraud-detection:latest
 
-# ── Code quality ─────────────────────────────────────────────────
+# Code quality 
 lint:
 	@echo ">>> Running flake8..."
 	pip install --quiet flake8
 	flake8 src/ --max-line-length=100 --ignore=E402,W503
 
-# ── Tests ────────────────────────────────────────────────────────
+# Tests 
 test:
 	@echo ">>> Running tests..."
 	pip install --quiet pytest

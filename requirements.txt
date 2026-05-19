@@ -1,7 +1,6 @@
-# ─────────────────────────────────────────────
+
 #  Credit Card Fraud Detection – Dependencies
 #  Python 3.11+
-# ─────────────────────────────────────────────
 
 # Core data science
 numpy==1.26.4
